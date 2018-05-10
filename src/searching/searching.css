@@ -1,0 +1,44 @@
+.dark-brown {
+  color: #bf865b;
+}
+
+.center-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 80%;
+  text-align: center;
+}
+
+/* .item {
+    max-width: 70%;
+} */
+
+.top {
+  align-self: flex-start;
+}
+
+.bottom {
+  align-self: flex-end;
+}
+
+.image {
+  margin-top: 3%;
+  width: 20%;
+  height: auto;
+}
+
+.small-text {
+    font-size: 0.8em;
+}
+
+.email-input input {
+    font-size: 0.8em;
+    border: 1px solid #bf865b;
+    background: transparent;
+}
+
+.email-input input::placeholder {
+    color: #7f593c
+}
