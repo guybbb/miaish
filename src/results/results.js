@@ -1,5 +1,6 @@
 import React from 'react'
 import './results.css'
+import '../common.css'
 import {S3} from '../index'
 
 export default class Results extends React.Component {
@@ -26,22 +27,22 @@ export default class Results extends React.Component {
 
     render() {
         if (!this.state.images) {
-            return <div>One second fetching your results...</div>
+            return <div className="center-container column">One second fetching your results...</div>
         }
         if (this.state.images.length > 1) {
             return (
-                <div>
+                <div className="center-container column">
                     <div>Good News! We found a few results that might match your search
                     </div>
                     {this
                         .state
                         .images
-                        .map((image, index) => <img key={index} src={`${S3}/${image.public_photo_url}`}/>)}
+                        .map((image, index) => <img className="small-image" key={index} src={`${S3}/${image.public_photo_url}`}/>)}
                 </div>
             )
         } 
         else {
-            return <div>Sorry :( No Results</div>
+            return <div className="center-container column">Sorry :( No Results</div>
         }
     }
 }
