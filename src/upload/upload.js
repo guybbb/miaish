@@ -50,7 +50,12 @@ class UploadScreen extends React.Component {
 
   upoadToServer = () => {
     const formData = new FormData();
-    formData.append('image', this.state.image);
+
+    if (!this.state.image.name) {
+      formData.append('image', this.state.image, 'capture.jpeg');
+    } else {
+      formData.append('image', this.state.image);
+    }
 
     const config = {
       headers: {
@@ -94,7 +99,9 @@ class UploadScreen extends React.Component {
               <Camera
                 style={style.preview}
                 video={{
-                facingMode: "environment"
+                facingMode: 'environment',
+                width: '400', 
+                height: '400'
               }}
                 ref={cam => {
                 this.camera = cam;
