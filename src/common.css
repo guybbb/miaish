@@ -10,3 +10,18 @@
   .column {
       flex-direction: column
   }
+
+
+.small-text {
+    font-size: 0.8em;
+}
+
+.email-input input {
+    font-size: 0.8em;
+    border: 1px solid #bf865b;
+    background: transparent;
+}
+
+.email-input input::placeholder {
+    color: #7f593c
+}

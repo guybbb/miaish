@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <div className="header">HEADER</div>
+        <div className="header">Miaish</div>
         <Switch>
           <Route path='/:id/results' component={Results}/>
           <Route path='/:id' component={Searching}/>
